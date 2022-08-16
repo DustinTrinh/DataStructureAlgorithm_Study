@@ -1,4 +1,5 @@
 //Structure of Commands : ['INSERT', 'Item', 'Price'] or ['VIEW', '-', '-']
+// a change
 
 const machine = (commands) => {
   //Structure of the store = [  [[item1, item2, item3], price]  ];
