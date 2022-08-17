@@ -16,6 +16,6 @@ var maxProfit = function (prices) {
     return maxProfit;
   };
 
-  let prices = [9,2,3,1,5,6, 0,7,8,99,0];
+  let prices = [1, 2, 3, 4, 3, 2, 1, 2, 5];
   let result = maxProfit(prices);
   console.log(result);
