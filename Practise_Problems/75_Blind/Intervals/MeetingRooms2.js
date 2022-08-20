@@ -15,6 +15,7 @@
     intervals.sort(([aStart, aEnd], [bStart, bEnd]) =>
       aStart !== bStart ? aStart - bStart : aEnd - bEnd
     );
+    console.log(intervals)
     if(intervals.length === 0) return 0;
     let prev = intervals.shift();
     let rooms = 1;
@@ -32,7 +33,7 @@
     }
     return rooms;
   };
-  let intervals = [[0, 30], [3,10], [5, 10], [11,13], [15, 25]];
+  let intervals = [[2,3], [2,4], [4, 5], [3,5]];
   let intervals2 = [];
   for(let i = 0 ; i < intervals.length; i++){
       let temp = new Interval(intervals[i][0], intervals[i][1]);
