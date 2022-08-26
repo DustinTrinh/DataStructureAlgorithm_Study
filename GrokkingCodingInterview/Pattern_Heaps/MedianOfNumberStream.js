@@ -16,14 +16,9 @@ class MedianOfAStream {
         //Max heap can have equal or 1 more element than Min Heap only
         if (this.maxHeap.length > this.minHeap.length + 1) {
             this.minHeap.push(this.maxHeap.pop());
-        } else if (this.maxHeap.length + 1 < this.minHeap.length) {
+        } else if (this.maxHeap.length < this.minHeap.length) {
             this.maxHeap.push(this.minHeap.pop());
         }
-        console.log("MIN-----------------------------")
-        console.log(this.minHeap);
-
-        console.log("MAX-----------------------------")
-        console.log(this.maxHeap)
     }
 
     find_median(self) {
@@ -38,9 +33,9 @@ class MedianOfAStream {
 
 var medianOfAStream = new MedianOfAStream();
 medianOfAStream.insert_num(3);
-medianOfAStream.insert_num(1);
+medianOfAStream.insert_num(-1);
 //console.log(`The median is: ${medianOfAStream.find_median()}`);
 medianOfAStream.insert_num(5);
 //console.log(`The median is: ${medianOfAStream.find_median()}`);
-medianOfAStream.insert_num(4);
-//console.log(`The median is: ${medianOfAStream.find_median()}`);
+//medianOfAStream.insert_num(4);
+console.log(`The median is: ${medianOfAStream.find_median()}`);

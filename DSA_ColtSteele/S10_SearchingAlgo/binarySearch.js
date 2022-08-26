@@ -30,7 +30,7 @@ function binarySearch(arr, target){
 }
 
 let arr1 = ["cat", "dog", "bird", "monkey"];
-let arr2 = [4,5,7,3,1,6,7,88,43,65,234,774,74,12,44,56,67];
-let target = 9999;
+let arr2 = [4,6,10];
+let target = 19;
 
 binarySearch(arr2, target);

@@ -10,7 +10,7 @@ function find_string_anagrams(str, pattern) {
       }
       charFrequency[chr] += 1;
     }
-  
+    
     const resultIndices = [];
     // our goal is to match all the characters from the 'charFrequency' with the current window
     // try to extend the range [windowStart, windowEnd]
@@ -25,11 +25,10 @@ function find_string_anagrams(str, pattern) {
       }
   
       if (matched === Object.keys(charFrequency).length) { // have we found an anagram?
-        console.log(Object.keys(charFrequency))
-        console.log(matched)
         resultIndices.push(windowStart);
       }
-  
+      console.log("--Before-- " + windowEnd);
+      console.log(charFrequency)
       // shrink the sliding window
       if (windowEnd >= pattern.length - 1) {
         leftChar = str[windowStart];
@@ -41,9 +40,11 @@ function find_string_anagrams(str, pattern) {
           charFrequency[leftChar] += 1; // put the character back
         }
       }
+      console.log("--After--");
+      console.log(charFrequency)
     }
   
     return resultIndices;
   }
 
-console.log(find_string_anagrams("adbbcabc", "cba"));
+console.log(find_string_anagrams("abccba", "cba"));
