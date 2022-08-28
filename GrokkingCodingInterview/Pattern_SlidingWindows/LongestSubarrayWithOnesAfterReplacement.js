@@ -1,16 +1,28 @@
 const length_of_longest_substring = function (str, k) {
-    let countOnes = 0;
-    let maxLength = 0;
+    // TODO: Write your code here
+    let charStorage = new Map();
     let start = 0;
+    let maxRepeat = 0;
+    let maxLength = 0;
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === 1) countOnes++;
+        if (!charStorage[str[i]]) {
+            charStorage[str[i]] = 1;
+        } else {
+            charStorage[str[i]] += 1;
+        }
 
-        if (i - start + 1 - countOnes > k) {
-            if (str[start] === 1) countOnes--;
+        maxRepeat = Math.max(maxRepeat, charStorage[str[i]]);
+
+        if (i - start + 1 - maxRepeat > k) {
+            charStorage[str[start]] -= 1;
             start++;
         }
         maxLength = Math.max(maxLength, i - start + 1);
     }
-
-    return maxLength === 0 ? -1 : maxLength;
+    if (maxLength !== 0) return maxLength;
+    return -1;
 };
+
+console.log(length_of_longest_substring("aabccbb", 2));
+console.log(length_of_longest_substring("abbcb", 1));
+console.log(length_of_longest_substring("abccde", 1));

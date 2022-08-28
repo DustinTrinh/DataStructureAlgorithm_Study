@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/maximum-subarray
 
-nums =  [-2,-1,-3,-4,-1,2,-1,-5,-99];
+nums =  [1, 10, -1, 11, 5, -30, -7, 20, 25, -35 ];
 
 const maxSubArray = (nums) => {
     let total = 0

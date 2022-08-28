@@ -1,5 +1,5 @@
 const triplet_sum_close_to_target = function (arr, target_sum) {
-    let closest = Infinity;
+    let closest = -Infinity;
     arr.sort((a, b) => a - b);
 
     for (let i = 0; i < arr.length; i++) {
@@ -28,7 +28,7 @@ const triplet_sum_close_to_target = function (arr, target_sum) {
             }
         }
     }
-
+    //console.log(closest)
     return target_sum - closest;
 };
 

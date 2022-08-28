@@ -12,7 +12,7 @@ const factorial2 = (value) =>{
     }
 }
 
-let result = factorial(5);
-let result2 = factorial(5);
+let result = factorial(4);
+let result2 = factorial(4);
 console.log(result);
 console.log(result2);
