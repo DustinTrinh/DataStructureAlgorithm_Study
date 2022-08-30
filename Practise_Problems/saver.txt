@@ -1,0 +1,24 @@
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === "(" || s[i] === "[") {
+            open.push(s[i]);
+        } else if (s[i] === ")" || s[i] === "]") {
+            close.push(s[i]);
+        } else {
+            q.push(s[i]);
+        }
+    }
+    for (let i = 0; i < open.length; i++) {
+        if (open[i] === "(") {
+            openRound += 1;
+        } else {
+            openSquare += 1;
+        }
+    }
+
+    for (let i = 0; i < close.length; i++) {
+        if (close[i] === ")") {
+            closeRound += 1;
+        } else {
+            closeSquare += 1;
+        }
+    }

@@ -14,8 +14,7 @@ const machine = (commands) => {
             if (store.length > 0) {
                 for (let j = 0; j < store.length; j++) {
                     //A value to keep track of store indexes
-                    let tracker = 0;
-
+                    
                     //If new item is cheaper than the index. Unshift
                     if (store[j][1] > price) {
                         let firstHalf = store.slice(0, j);
@@ -29,13 +28,11 @@ const machine = (commands) => {
                     //If new item is equal to the index. Add to the array, alphabetically
                     else if (store[j][1] === price) {
                         store[j][0].push(item);
-
-                        //sort by name
-                        //store[j][0].sort();
                         break;
                     }
                     //If new item is more expensive than index.
                     else {
+                        let tracker = j;
                         while (tracker <= store.length) {
                             //End of the store and no more items to compare with
                             if (tracker === store.length) {
@@ -100,7 +97,12 @@ const machine = (commands) => {
 
 let commands = [
     ["INSERT", "Pizza", 8],
-    ["INSERT", "Milk", 1],
+    ["INSERT", "Milk", 4],
+    ["INSERT", "Chocolate", 6],
+    ["INSERT", "Bread", 2],
+    ["INSERT", "Water", 1],
+    ["INSERT", "Juice", 4],
+    ["VIEW", "-", "-"],
     ["VIEW", "-", "-"]
 ];
 

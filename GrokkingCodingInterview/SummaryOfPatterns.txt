@@ -1,0 +1,4 @@
+1. Sliding Windows
+- Create a start to point at very first
+- Logic (adding sums or something)
+- Condition (based on requirments) -> Substract the one at start then move start forward

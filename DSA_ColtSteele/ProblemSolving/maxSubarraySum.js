@@ -14,16 +14,17 @@ function maxSubarraySum(arr, num){
     tempSum = maxSum;
     for (let i = num; i < arr.length; i++) {
       tempSum = tempSum - arr[i - num] + arr[i];
+      console.log(tempSum)
       maxSum = Math.max(maxSum, tempSum);
     }
     return maxSum;
   }
 
 console.log(maxSubarraySum([1,2,5,2,8,1,5],2)); // 10
-console.log(maxSubarraySum([1,2,5,2,8,1,5],4));
-console.log(maxSubarraySum([4,2,1,6],1));
-console.log(maxSubarraySum([4,2,1,6,2],4));
-console.log(maxSubarraySum([],4))
+//console.log(maxSubarraySum([1,2,5,2,8,1,5],4));
+//console.log(maxSubarraySum([4,2,1,6],1));
+//console.log(maxSubarraySum([4,2,1,6,2],4));
+//console.log(maxSubarraySum([],4))
 
 /*Explanation
 Let's take first example. maxSubarraySum([1,2,5,2,8,1,5],2)
