@@ -44,8 +44,7 @@ let prerequisites = [
   [0, 1],
   [0, 2],
   [1, 3],
-  [1, 4],
-  [1, 4],
+  [1, 4]
 ];
 console.log(canFinish(numCourses, prerequisites));
  

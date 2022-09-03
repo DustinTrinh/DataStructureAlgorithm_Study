@@ -34,3 +34,8 @@ result = find_subsets([1, 5, 3, 3]);
 result.forEach((subset) => {
     console.log(subset);
 });
+
+let a1 = [1,2,3,4,5];
+let a2 = [6,7,8,9,10];
+let a3 = a1.concat(a2);
+console.log(a3)

@@ -11,7 +11,6 @@ const find_Kth_smallest = function (lists, k) {
         }
     }
 
-    // TODO: Write your code here
     return minHeap.peek();
 };
 

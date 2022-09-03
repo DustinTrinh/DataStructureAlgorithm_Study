@@ -4,13 +4,13 @@ function find_subsets(nums) {
     subsets.push([]);
     for (i = 0; i < nums.length; i++) {
         currentNumber = nums[i];
+        
         // we will take all existing subsets and insert the current number in them to create new subsets
         const n = subsets.length;
         for (j = 0; j < n; j++) {
             // create a new subset from the existing subset and insert the current element to it
             const set1 = subsets[j].slice(0); // clone the permutation
-            
-            set1.push(currentNumber);
+            console.log(set1)
             subsets.push(set1);
         }
     }

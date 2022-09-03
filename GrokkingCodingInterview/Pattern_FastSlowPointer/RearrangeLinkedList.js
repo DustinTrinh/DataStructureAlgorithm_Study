@@ -11,8 +11,8 @@ class Node {
     }
     
     print_list() {
-      result = "";
-      temp = this;
+      let result = "";
+      let  temp = this;
       while (temp !== null) {
         result += temp.value + " ";
         temp = temp.next;
@@ -21,10 +21,45 @@ class Node {
     }
   }
   
+  const reverseLinkedList = (head) => {
+    let prev = null;
+    let current = head;
+
+    while(current !== null){
+      let temp = current.next;
+      current.next = prev;
+      prev = current;
+      current = temp;
+      console.log("1")
+    }
+    return prev;
+  }
   
   const reorder = function(head) {
-    // TODO: Write your code here
-    return
+    let slow = head;
+    let fast = head;
+
+    while(fast !== null && fast.next !== null){
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+
+    let firstHalf = head;
+    let secondHalf = reverseLinkedList(slow);
+    
+    while(firstHalf !== null && secondHalf !== null){
+      let temp = firstHalf.next;
+      firstHalf.next = secondHalf;
+      firstHalf = temp;
+
+      temp = secondHalf.next;
+      secondHalf.next = firstHalf;
+      secondHalf = temp;
+
+    }
+    if(firstHalf.next !== null){
+      firstHalf.next = null;
+    }
   }
   
   
