@@ -31,6 +31,7 @@ let findMaxSumSubArray = function (nums) {
 let numsList = [
     [-4, 2, -5, 1, 2, 3, 6, -5, 1],
     [5, -2, 1, -3, 4, -2, 1, -3, 7],
+    [4, -1, 2, -7, 3,4]
 ];
 for (let i = 0; i < numsList.length; i++) {
     console.log("Sum of largest subarray: ", findMaxSumSubArray(numsList[i]));

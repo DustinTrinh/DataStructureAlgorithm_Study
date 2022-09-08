@@ -44,7 +44,7 @@ function find_paths(root, sum) {
         // we need to remove the current node while we are going up the recursive call stack.
         //console.log(currentPath);
         
-        console.log(currentPath.pop());
+        currentPath.pop();
     }
     find_paths_recursive(root, sum, new Deque(), allPaths);
     

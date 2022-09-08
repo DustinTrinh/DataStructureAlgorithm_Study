@@ -28,10 +28,10 @@ function findCoumpoundWords(arr, N){
         for(let j = 0; j < temp.length; j++){s
             temp2 = temp2.concat(temp[j]);
             
-            if(storeMap.get(temp2)){
+            if(storeMap.has(temp2)){
                 let second = temp.slice(j).join('');
                 
-                if(storeMap.get(second)){
+                if(storeMap.has(second)){
                     storeMap.set(temp2, storeMap.get(temp2) + 1);
                     storeMap.set(temp2, storeMap.get(second) + 1);
                 }
