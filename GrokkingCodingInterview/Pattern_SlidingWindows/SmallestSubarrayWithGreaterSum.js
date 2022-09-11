@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const smallest_subarray_sum = function (s, arr) {
     // TODO: Write your code here
     let sum = 0;

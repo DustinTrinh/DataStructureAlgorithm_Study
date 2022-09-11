@@ -1,18 +1,6 @@
 /*
-T: O(nlogn )
-S: O(n)
-*/
-/*
-const make_squares = function(arr) {
-    squares = []
-    for(let i = 0; i < arr.length; i++){
-      squares.push(Math.pow(arr[i],2));
-    }
-    squares.sort((a,b) => {
-      return a-b;
-    })
-    return squares;
-  };
+Time Complexity: O(N)
+Space Complexity:O(N)
 */
 const make_squares = function (arr) {
     squares = new Array(arr.length).fill(0);

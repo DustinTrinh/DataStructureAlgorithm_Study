@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const remove_duplicates = function (arr) {
     let right = 0;
     let unique = 1;

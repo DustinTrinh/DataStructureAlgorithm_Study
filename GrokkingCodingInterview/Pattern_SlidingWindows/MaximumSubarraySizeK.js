@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
+
 function max_sub_array_of_size_k(k, arr) {
     let max = 0;
     let sum = 0;

@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const longest_substring_with_k_distinct = function (str, k) {
     let storage = new Set();
     let longest = 0;

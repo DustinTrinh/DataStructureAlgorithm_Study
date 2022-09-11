@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N + M) where ‘N’ and ‘M’ are the number of characters in the input string and the pattern respectively.
+Space Complexity:O(M) & O(N) when HashMap have to store all characters or the result list have all the indexes.
+*/
 function find_string_anagrams(str, pattern) {
     let windowStart = 0,
       matched = 0,
@@ -27,8 +31,7 @@ function find_string_anagrams(str, pattern) {
       if (matched === Object.keys(charFrequency).length) { // have we found an anagram?
         resultIndices.push(windowStart);
       }
-      console.log("--Before-- " + windowEnd);
-      console.log(charFrequency)
+
       // shrink the sliding window
       if (windowEnd >= pattern.length - 1) {
         leftChar = str[windowStart];
@@ -40,8 +43,6 @@ function find_string_anagrams(str, pattern) {
           charFrequency[leftChar] += 1; // put the character back
         }
       }
-      console.log("--After--");
-      console.log(charFrequency)
     }
   
     return resultIndices;

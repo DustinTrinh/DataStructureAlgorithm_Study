@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const fruits_into_baskets = function (fruits) {
     // TODO: Write your code here
     let longest = 0;

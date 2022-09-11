@@ -16,13 +16,12 @@ const dutch_flag_sort = function (arr) {
             [arr[index], arr[right]] = [arr[right], arr[index]];
             right--;
         }
-        console.log(arr)
     }
 };
 
 let arr = [1, 0, 2, 1, 0];
-//dutch_flag_sort(arr);
-//console.log(arr);
+dutch_flag_sort(arr);
+console.log(arr);
 
 arr = [2, 2, 0, 1, 2, 0];
 dutch_flag_sort(arr);

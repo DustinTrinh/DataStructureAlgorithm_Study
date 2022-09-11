@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(NlogN + N^2)
+Space Complexity:O(N)
+*/
 const search_triplets = function (arr) {
     triplets = [];
     arr.sort((a,b) => a-b);

@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N^2)
+Space Complexity:O(N)
+*/
 const triplet_sum_close_to_target = function (arr, target_sum) {
     let closest = -Infinity;
     arr.sort((a, b) => a - b);
@@ -28,8 +32,7 @@ const triplet_sum_close_to_target = function (arr, target_sum) {
             }
         }
     }
-    //console.log(closest)
-    return target_sum - closest;
+    return Math.abs(target_sum - closest);
 };
 
 console.log(triplet_sum_close_to_target([-2, 0, 1, 2], -2));

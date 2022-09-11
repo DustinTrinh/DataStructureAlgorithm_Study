@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(K) where K is the number of chars that can present (26 based on alphabetical)
+*/
+
 const non_repeat_substring = function(str) {
     // TODO: Write your code here
     if(str.length < 2) return str.length;
