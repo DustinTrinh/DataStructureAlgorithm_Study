@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(NlogK)
+Space Complexity:O(K)
+*/
+
 const Heap = require("../../node_modules/collections/heap");
 class ListNode {
     constructor(value, next = null) {
@@ -14,7 +19,7 @@ const merge_lists = function (lists) {
     for (let list of lists) {
         minHeap.push(list);
     }
-    console.log(minHeap)
+
     while (minHeap.length > 0) {
         let node = minHeap.pop();
 

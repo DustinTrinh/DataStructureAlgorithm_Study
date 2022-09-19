@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N + NlogK)
+Space Complexity:O(N)
+*/
 const Heap = require("../../node_modules/collections/heap");
 
 const find_Kth_smallest_number = function (nums, k) {

@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 function search_rotated_array(arr, key) {
     let start = 0;
     let end = arr.length - 1;

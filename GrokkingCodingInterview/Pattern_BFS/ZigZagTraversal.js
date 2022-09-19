@@ -1,5 +1,8 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(N)
+*/
 class TreeNode {
-
     constructor(value) {
       this.value = value;
       this.left = null;
@@ -18,26 +21,19 @@ class TreeNode {
         let qLen = queue.length;
         
         let tempQueue = [];
-        if(leftToRight){
-            for(let i = 0; i < qLen; i++){
-                let current = queue.shift();
+        for(let i = 0; i < qLen; i++){
+            let current = queue.shift();
+            if(leftToRight){
                 tempQueue.push(current.value);
-                if(current.left) queue.push(current.left);
-                if(current.right) queue.push(current.right);
             }
-            leftToRight = false;
-        }
-        else if(leftToRight === false){
-            for(let i = 0; i < qLen; i++){
-                let current = queue.shift();
+            else{
                 tempQueue.unshift(current.value);
-                if(current.left) queue.push(current.left);
-                if(current.right) queue.push(current.right);
             }
-            leftToRight = true;
+            if(current.left) queue.push(current.left);
+            if(current.right) queue.push(current.right);
         }
-        
         result.push(tempQueue);
+        leftToRight = !leftToRight;
     }
 
     return result;

@@ -1,49 +1,37 @@
-const find_k_frequent_numbers = function (nums, k) {
-    let topNumbers = [];
-    let tempArray = [];
-    let countFrequent = new Map();
-
-    for(let i = 0; i < nums.length; i++){
-        tempArray.push([]);
+/*
+Time Complexity: O(NlogK)
+Space Complexity:O(K)
+*/
+const Heap = require("../../node_modules/collections/heap");
+const find_Kth_smallest_number = function (nums, k) {
+    let maxHeap = new Heap([], null, (a, b) => a - b);
+    let result = 0;
+    for (let i = 0; i < nums.length; i++) {
+        maxHeap.push(nums[i]);
     }
 
-    for(let i = 0; i < nums.length; i++){
-        if(!countFrequent.has(nums[i])){
-            countFrequent.set(nums[i], 1);
-        }
-        else{
-            countFrequent.set(nums[i], countFrequent.get(nums[i]) + 1 );
-        }
+    for (let i = 0; i < k; i++) {
+        result = maxHeap.pop();
     }
-    countFrequent.forEach((value, key)=>{
-        tempArray[value].push(key);
-    });
 
-    for(let i = tempArray.length-1; i >= 0; i--){
-        if(!tempArray[i].length) continue;
-        else{
-            for(let item of tempArray[i]){
-                topNumbers.push(item);
-            }
-        }
-    }
-    while(topNumbers.length > k){
-        topNumbers.pop()
-    }
-    
-    
-    return topNumbers;
+    return result;
 };
 
 console.log(
-    `Here are the K frequent numbers: ${find_k_frequent_numbers(
-        [1, 3, 5, 12, 11, 12, 11],
-        2
+    `Kth smallest number is: ${find_Kth_smallest_number(
+        [1, 5, 12, 2, 11, 5],
+        3
     )}`
 );
 console.log(
-    `Here are the K frequent numbers: ${find_k_frequent_numbers(
-        [5, 12, 11, 3, 11],
-        2
+    `Kth smallest number is: ${find_Kth_smallest_number(
+        [1, 5, 12, 2, 11, 5],
+        4
+    )}`
+);
+console.log(
+    `Kth smallest number is: ${find_Kth_smallest_number(
+        [5, 12, 11, -1, 12],
+        3
     )}`
 );

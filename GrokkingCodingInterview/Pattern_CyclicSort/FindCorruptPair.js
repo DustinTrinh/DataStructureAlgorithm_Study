@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const find_corrupt_numbers = function (nums) {
     let i = 0;
 

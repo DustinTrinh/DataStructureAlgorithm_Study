@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(N)
+*/
 class TreeNode {
     constructor(val) {
         this.val = val;

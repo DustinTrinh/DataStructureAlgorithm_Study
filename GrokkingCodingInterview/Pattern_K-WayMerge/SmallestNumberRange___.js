@@ -1,4 +1,12 @@
-const Heap = require('../../node_modules/collections/heap'); //http://www.collectionsjs.com
+/*
+Time Complexity: O(N∗logM)
+Since, at most, we’ll be going through all the elements of all the arrays and will 
+remove/add one element in the heap in each step, the time complexity of the above algorithm will be O(N*logM)
+where ‘N’ is the total number of elements in all the ‘M’ input arrays.
+
+Space Complexity:O(M)
+*/
+
 
 function find_smallest_range(lists) {
   const minHeap = new Heap([], null, ((a, b) => b[0] - a[0]));

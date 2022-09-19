@@ -2,3 +2,65 @@
 - Create a start to point at very first
 - Logic (adding sums or something)
 - Condition (based on requirments) -> Substract the one at start then move start forward
+
+2. 2 Pointers
+- 1 left 1 right. Iterate within the while left <= right pointer.
+
+3. Fast & Slow Pointers
+- Use for checking cycle. 
+- 1 fast move twice faster than slow.
+
+4. Merge Intervals
+- Use for scheduling and see if it overlap with other events.
+- First, sort every events by the start
+- Second, store 1 event as current, store first event of the Intervals
+- Third, go through for loop and compare.
+- Fourth, compare and get MAX of the end of the event.
+- Fifth, remember to reassign current.
+- Sixth, push last interval in.
+
+5. Cyclic sort
+    1. Set i as a beginning, or smallest indx
+    2. Put i into while loop which is less than array's length
+    3. Set j as a CORRECT index for such element num[i] => num[i] - 1
+    4. Have an IF statement to see if num[i] === num[j] ==> Correct, i++
+    4. Else => Swap them
+
+6. LinkedList Reversal
+    1. Create a current node which is at the beginning of the linkedlist.
+    2. Create a Prev as null or LAST ELEMENT new List will point at.
+    3. Within the loop, while current !== null.
+    4. Create a temp which will store current.next
+    5. Set current.next = prev;
+    6. Set prev = current;
+    7. Set current = temp; 
+
+7. Binary Tree BFS
+    1. Create a queue which store the root first.
+    2. While the queue.length > 0
+    3. Create temp value which will store the node of queue.shift();
+    ~4. If theres a need to push data, push it
+    5. Check if there's left => push to queue.
+    6. Check if there's right => push to queue/.
+
+8. Binary Tree DFS
+    1. Create a recursive function
+    2. Set edge cases.
+    3. Do recursive 
+
+9. Binary Search
+    1. Create left, mid, right values
+    2. Get into while loop where left <= right
+    3. Find mid value by average of left & mid then floor it
+    4. Move left and right based on the logic
+
+10. Topological Sort -> Graph
+    1. Create Sources array (Contain elements with 0 inDegrees)
+    2. Create Indegrees array (Count how many nodes point to this vertex): inDegrees = new Array(vertices).fill(0);
+    3. Create graph array to store Parents and array 0f Children: graph = new Array(vertices).fill(0).map(() => Array());
+    4. Loop through input adjacency list. Get parent and then push children in. And increase indegrees for following child.
+    5. Loops through inDegrees and find all the sources (have inDegrees of 0).
+    6. Loop through Sources, add the element into order array.
+    7. Go through all the children of this sources, decrease inDegrees of this child
+        and add it into sources array if it's inDegrees is 0 now.
+    8. Compare if the length of vertices === length of orderedArray. If not just return false.

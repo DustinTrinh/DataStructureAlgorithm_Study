@@ -1,9 +1,14 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const find_duplicate = function (nums) {
     // TODO: Write your code here
     let i = 0;
     while (i < nums.length) {
+        j = nums[i] - 1;
         if (nums[i] !== i + 1) {
-            j = nums[i] - 1;
+            
             if (nums[i] !== nums[j]) {
                 [nums[i], nums[j]] = [nums[j], nums[i]];
             } else {

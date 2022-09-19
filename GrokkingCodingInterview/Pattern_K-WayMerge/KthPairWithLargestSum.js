@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(K * K logK)
+Space Complexity:O(K)
+*/
+
 const Heap = require("../../node_modules/collections/heap"); //http://www.collectionsjs.com
 
 const find_k_largest_pairs = function (nums1, nums2, k) {

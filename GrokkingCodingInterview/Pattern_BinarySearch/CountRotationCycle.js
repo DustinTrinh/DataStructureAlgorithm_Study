@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 const count_rotations = function (arr) {
     return findSmallest(arr);
 };

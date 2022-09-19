@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logK)
+Space Complexity:O(K)
+*/
 const Heap = require("../../node_modules/collections/heap");
 
 class KthLargestNumberInStream {

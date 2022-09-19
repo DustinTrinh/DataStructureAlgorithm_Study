@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(NlogN)
+Space Complexity:O(N)
+*/
 const Heap = require("../../node_modules/collections/heap");
 
 const minimum_cost_to_connect_ropes = function(ropeLengths) {

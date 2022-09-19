@@ -3,6 +3,10 @@
 2. Find the length of the circle
 3. Create 2 pointers and move 1 pointer ahead equivilant to # of length of circle
 4. Keep going next until they met. Finally found the start point of circle 
+
+Time Complexity: O(N)
+Space Complexity:O(1)
+
 */
 class Node {
     constructor(value, next = null) {

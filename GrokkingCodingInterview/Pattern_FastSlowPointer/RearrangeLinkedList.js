@@ -2,6 +2,10 @@
 1. FInd middle.
 2. Reverse middle
 3. Point to corrent place
+
+Time Complexity: O(N)
+Space Complexity:O(1)
+
 */
 
 class Node {

@@ -12,7 +12,10 @@ const find_missing_number = function(nums) {
     return result;
   };
   */
-
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 function find_missing_number(nums) {
     let i = 0;
     const n = nums.length;

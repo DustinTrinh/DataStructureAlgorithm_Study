@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(NlogK)
+Space Complexity:O(K)
+*/
 const Heap = require ('../../node_modules/collections/heap');
 
 const find_k_largest_numbers = function(nums, k) {
@@ -18,4 +22,3 @@ const find_k_largest_numbers = function(nums, k) {
   
   console.log(`Here are the top K numbers: ${find_k_largest_numbers([3, 1, 5, 12, 2, 11], 3)}`)
   console.log(`Here are the top K numbers: ${find_k_largest_numbers([5, 12, 11, -1, 12], 3)}`)
-  

@@ -1,3 +1,9 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
+
+
 const search_ceiling_of_a_number = function (arr, key) {
     if (key > arr[arr.length - 1]) return -1;
     let left = 0;

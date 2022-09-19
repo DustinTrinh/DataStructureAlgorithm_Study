@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 const find_max_in_bitonic_array = function (arr) {
     let left = 0;
     let right = arr.length - 1;

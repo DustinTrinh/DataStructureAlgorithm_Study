@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 const find_happy_number = function (num) {
     // TODO: Write your code here\
     let slow = num;

@@ -1,5 +1,9 @@
 //Number of result = K;
 //X is target
+/*
+Time Complexity: O(N + K)
+Space Complexity: O(K)
+*/
 const find_closest_elements = function (arr, K, X) {
     result = [];
     if(K > arr.length) return result;

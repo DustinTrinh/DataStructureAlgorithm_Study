@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const find_all_duplicates = function (nums) {
     duplicateNumbers = [];
     let i = 0;

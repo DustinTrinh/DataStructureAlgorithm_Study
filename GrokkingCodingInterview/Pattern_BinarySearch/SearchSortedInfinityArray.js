@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 class ArrayReader {
     constructor(arr) {
         this.arr = arr;

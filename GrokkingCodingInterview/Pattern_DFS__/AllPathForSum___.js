@@ -1,3 +1,18 @@
+/*
+Time complexity#
+The time complexity of the above algorithm is O(N^2)
+where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once (which will take O(N)
+), and for every leaf node, we might have to store its path (by making a copy of the current path) which will take O(N)
+O(N)
+We can calculate a tighter time complexity of O(NlogN)
+O(NlogN) from the space complexity discussion below.
+
+Space complexity
+in the worst case, we have to copy log(N)
+nodes to store its path; therefore, the time complexity of our algorithm will also be O(N*logN)
+O(N∗logN)
+.
+*/
 const Deque = require("collections/deque"); //http://www.collectionsjs.com
 class TreeNode {
     constructor(val, left = null, right = null) {

@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N + M)
+Space Complexity:O(M + N)
+*/
 const backspace_compare = function (str1, str2) {
     let string1 = [];
     let string2 = [];

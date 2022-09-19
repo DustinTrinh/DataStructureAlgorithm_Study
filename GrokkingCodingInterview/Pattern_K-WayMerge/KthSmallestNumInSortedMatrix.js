@@ -1,17 +1,17 @@
 const Heap = require("../../node_modules/collections/heap");
 const find_Kth_smallest = function (matrix, k) {
     number = -1;
-    let minHeap = new Heap([], null, (a, b) => a - b);
+    let maxHeap = new Heap([], null, (a, b) => a - b);
 
     for (let i = 0; i < matrix.length; i++) {
         for (let j of matrix[i]) {
-            minHeap.push(j);
-            if (minHeap.length > k) {
-                minHeap.pop();
+          maxHeap.push(j);
+            if (maxHeap.length > k) {
+              maxHeap.pop();
             }
         }
     }
-    return minHeap.peek();
+    return maxHeap.peek();
 };
 
 /*

@@ -1,4 +1,13 @@
-const Heap = require("../../node_modules/collections/heap");
+/*
+Time complexity#
+The time complexity of the insertNum() will be O(logN)
+due to the insertion in the heap. The time complexity of the findMedian() will be O(1)
+as we can find the median from the top elements of the heaps.
+
+Space complexity#
+The space complexity will be O(N)
+O(N) because, as at any time, we will be storing all the numbers.
+*/
 
 class MedianOfAStream {
     constructor() {
@@ -22,10 +31,9 @@ class MedianOfAStream {
     }
 
     find_median(self) {
-        if(this.maxHeap.length === this.minHeap.length){
+        if (this.maxHeap.length === this.minHeap.length) {
             return (this.maxHeap.peek() + this.minHeap.peek()) / 2;
-        }
-        else{
+        } else {
             return this.maxHeap.peek();
         }
     }

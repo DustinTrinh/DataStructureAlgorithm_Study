@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 const search_bitonic_array = function (arr, key) {
     let left = 0;
     let right = arr.length - 1;

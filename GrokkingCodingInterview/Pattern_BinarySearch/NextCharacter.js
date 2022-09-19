@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(logN)
+Space Complexity:O(1)
+*/
 const search_next_letter = function (letters, key) {
     // TODO: Write your code here
     if(key > letters[letters.length-1]) return letters[0];

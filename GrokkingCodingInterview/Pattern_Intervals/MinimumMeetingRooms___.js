@@ -1,3 +1,9 @@
+/*
+Time Complexity: O(NlogN)
+Space Complexity:O(N)
+*/
+
+const Heap = require('../../node_modules/collections/heap'); //http://www.collectionsjs.com
 class Meeting {
     constructor(start, end) {
         this.start = start;
@@ -18,6 +24,7 @@ const min_meeting_rooms = function (meetings) {
     }
     start.sort((a, b) => a - b);
     end.sort((a, b) => a - b);
+
     while (s < meetings.length) {
         if (start[s] < end[e]) {
             s++;
@@ -30,6 +37,27 @@ const min_meeting_rooms = function (meetings) {
     }
     return meetingRooms;
 };
+
+/*
+function min_meeting_rooms(meetings) {
+  // sort the meetings by start time
+  meetings.sort((a, b) => a.start - b.start);
+
+  let minRooms = 0,
+    minHeap = new Heap([], null, ((a, b) => b.end - a.end));
+  for (i = 0; i < meetings.length; i++) {
+    // remove all the meetings that have ended
+    while (minHeap.length > 0 && meetings[i].start >= minHeap.peek().end) {
+      minHeap.pop();
+    }
+    // add the current meeting into min_heap
+    minHeap.push(meetings[i]);
+    // all active meetings are in the min_heap, so we need rooms for all of them.
+    minRooms = Math.max(minRooms, minHeap.length);
+  }
+  return minRooms;
+}
+*/
 
 console.log(
     `Minimum meeting rooms required: ${min_meeting_rooms([

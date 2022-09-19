@@ -1,3 +1,8 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(N)
+*/
+
 class TreeNode {
     constructor(val, left = null, right = null) {
         this.val = val;
@@ -11,17 +16,16 @@ function hasPath(root, sum) {
         return false;
     }
 
-    // if the current node is a leaf and its value is equal to the sum, we've found a path
-    if (root.val === sum && root.left === null && root.right === null) {
-        return true;
+    function dfs(root, sum){
+        if(!root) return false;
+        if(!root.left && !root.right && root.val === sum) return true;
+
+
+        return dfs(root.left, sum - root.val) || dfs(root.right, sum - root.val);
+
     }
 
-    // recursively call to traverse the left and right sub-tree
-    // return true if any of the two recursive call return true
-    return (
-        hasPath(root.left, sum - root.val) ||
-        hasPath(root.right, sum - root.val)
-    );
+    return dfs(root,sum);
 }
 
 const root = new TreeNode(12);

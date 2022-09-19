@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N)
+Space Complexity:O(N)
+*/
 class TreeNode {
     constructor(value) {
         this.value = value;
@@ -7,33 +11,20 @@ class TreeNode {
 }
 
 const find_path = function (root, sequence) {
-    if (!root) return false;
-    //Length of sequence
-    let elementCounter = sequence.length;
-    //Track the indexes
-    let tracker = 0;
-    let result = false;
-
-    function traverse(root, sequence) {
-        //console.log(root.value + " " + sequence[tracker] + " " + tracker)
-        if (tracker === elementCounter - 1 && !root.left && !root.right) {
-            result = true;
-            return;
+    function traverse(root, sequence, tracker = 0) {
+        if (root === null) return false;
+        if (tracker >= sequence.length || root.value !== sequence[tracker]) return false;
+        
+        if (tracker === sequence.length-1 && !root.left && !root.right) {
+            return true;
         }
+        
 
-        if (root.value === sequence[tracker]) {
-            tracker++;
-        } else {
-            result = false;
-            return;
-        }
-
-        if (root.left) traverse(root.left, sequence);
-        if (root.right) traverse(root.right, sequence);
+        return traverse(root.left, sequence, tracker+1) ||  traverse(root.right, sequence, tracker+1);
     }
 
-    traverse(root, sequence);
-    return result;
+    
+    return traverse(root, sequence);
 };
 
 var root = new TreeNode(1);

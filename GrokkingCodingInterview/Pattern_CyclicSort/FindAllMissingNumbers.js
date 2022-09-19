@@ -2,6 +2,11 @@
 1. Do cyclic sort
 2. If any number not in place => Push to array
 */
+
+/*
+Time Complexity: O(N)
+Space Complexity:O(1)
+*/
 const find_missing_numbers = function(nums) {
     missingNumbers = [];
     
@@ -15,7 +20,7 @@ const find_missing_numbers = function(nums) {
             i++;
         }
     }
-
+    console.log(nums)
     for(let i = 0; i < nums.length; i++){
         if(nums[i] !== i+1){
             missingNumbers.push(i+1);

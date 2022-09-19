@@ -1,3 +1,13 @@
+/*
+Time Complexity: O(N∗K)
+Inserting/removing numbers from heaps of size ‘K’. This will take O(logK)
+Removing the element going out of the sliding window. This will take O(K)
+as we will be searching this element in an array of size ‘K’ (i.e., a heap).
+
+Space Complexity:O(K)
+*/
+
+
 const Heap = require("../../node_modules/collections/heap");
 class SlidingWindowMedian {
     find_sliding_window_median(nums, k) {
@@ -7,7 +17,6 @@ class SlidingWindowMedian {
             
             tempArray.push(nums[i]);
             if(tempArray.length === k){
-                //console.log(tempArray)
                 result.push(this.findMedian(tempArray));
                 tempArray.shift();
             }

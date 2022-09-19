@@ -1,33 +1,37 @@
+/*
+Time Complexity: O(V + E)
+Space Complexity:O(V+E)
+*/
 const topological_sort = function (vertices, edges) {
     let sortedOrder = [];
     let graph = new Array(vertices).fill(0).map(() => Array());
-    let incomingDirection = new Array(vertices).fill(0);
+    let inDegrees = new Array(vertices).fill(0);
     let sources = [];
 
-    //1. Put children into parents indexes (graph) & increase # of incoming direction for children (incomingDirection)
+    //1. Put children into parents indexes (graph) & increase # of incoming direction for children (inDegrees)
     edges.forEach((edge) =>{
         let parent = edge[0];
         let child = edge[1];
         graph[parent].push(child);
-        incomingDirection[child]++;
+        inDegrees[child]++;
     });
-    //console.log(incomingDirection)
-    //2 Get all the sources(no incoming) from incomingDirections
-    for(let i = 0; i < incomingDirection.length; i++){
-        if(incomingDirection[i] === 0){
+    //console.log(inDegrees)
+    //2 Get all the sources(no incoming) from inDegreess
+    for(let i = 0; i < inDegrees.length; i++){
+        if(inDegrees[i] === 0){
             sources.push(i);
         }
     }
     //console.log(sources)
-    //Push into the sorted array. From sources (do like BFS) and decrease the incomingDirection.
+    //Push into the sorted array. From sources (do like BFS) and decrease the inDegrees.
     //Once the child has no more incoming direction.It will become a source -> Push it into SOurces
 
     while(sources.length > 0){
         let vertex = sources.shift();
         sortedOrder.push(vertex);
         graph[vertex].forEach((node) => {
-            incomingDirection[node]-=1;
-            if(incomingDirection[node] === 0){
+            inDegrees[node]-=1;
+            if(inDegrees[node] === 0){
                 sources.push(node);
             }
         })

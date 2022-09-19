@@ -13,7 +13,6 @@ const insert = function (intervals, new_interval) {
     let merged = [];
     intervals.push(new_interval);
     intervals.sort((a, b) => a.start - b.start);
-    console.log(intervals);
     let firstEvent = intervals[0];
     let [curStart, curEnd] = [firstEvent.start, firstEvent.end];
     for (let i = 1; i < intervals.length; i++) {
