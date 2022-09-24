@@ -13,4 +13,4 @@ function fib(n, memo=[undefined, 1,1]){
     return res;
 }
 
-console.log(fib(56));
+console.log(fibonacci(2));

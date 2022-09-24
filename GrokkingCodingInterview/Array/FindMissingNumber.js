@@ -7,8 +7,6 @@ const find_missing_number = function(nums) {
         sum += nums[i];
     }
     result = Math.floor(n*(n+1)/2) - sum;
-    console.log(Math.floor(n*(n+1)/2))
-    console.log(sum);
     return result;
   };
 

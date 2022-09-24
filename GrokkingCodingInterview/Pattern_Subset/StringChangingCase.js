@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N * 2^N)
+Space Complexity:O(N * 2^N)
+*/
 function find_letter_case_string_permutations(str) {
     permutations = [];
     permutations.push(str);
@@ -15,6 +19,7 @@ function find_letter_case_string_permutations(str) {
             chs[i] = chs[i].toLowerCase();
           }
           permutations.push(chs.join(''));
+          console.log(permutations + " - " + i + " " + j)
         }
       }
     }
@@ -24,4 +29,4 @@ function find_letter_case_string_permutations(str) {
   
   
   console.log(`String permutations are: ${find_letter_case_string_permutations('ad52')}`);
-  console.log(`String permutations are: ${find_letter_case_string_permutations('ab7c')}`);
+  //console.log(`String permutations are: ${find_letter_case_string_permutations('ab7c')}`);

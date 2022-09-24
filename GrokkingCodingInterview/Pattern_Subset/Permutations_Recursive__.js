@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N * N!)
+Space Complexity:O(N * N!)
+*/
 function generate_permutations(nums) {
   const result = [];
   generate_permutations_recursive(nums, 0, [], result);
@@ -20,4 +24,4 @@ function generate_permutations_recursive(nums, index, currentPermutation, result
 
 console.log('Here are all the permutations:');
 const result = generate_permutations([1, 3, 5]);
-//result.forEach((permutation) => {  console.log(permutation);});
+result.forEach((permutation) => {  console.log(permutation);});

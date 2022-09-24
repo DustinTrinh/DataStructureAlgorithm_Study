@@ -1,8 +1,8 @@
 /*
-Time & Space Complexity: N * 2^N 
+Time Complexity: O(N * 2^N)
+Space Complexity:O(N * 2^N)
 */
-
-const Deque = require('collections/deque'); //http://www.collectionsjs.com
+const Deque = require('../../node_modules/collections/deque'); //http://www.collectionsjs.com
 
 class ParenthesesString {
   constructor(str, openCount, closeCount) {

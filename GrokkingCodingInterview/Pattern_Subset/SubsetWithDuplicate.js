@@ -1,3 +1,7 @@
+/*
+Time Complexity: O(N * 2^N)
+Space Complexity:O(N * 2^N)
+*/
 const find_subsets = function (nums) {
     let subsets = [];
     nums.sort((a, b) => a - b);
@@ -24,7 +28,7 @@ const find_subsets = function (nums) {
 };
 
 console.log("Here is the list of subsets: ");
-let result = find_subsets([1, 3, 3]);
+let result = find_subsets([1, 3, 5]);
 result.forEach((subset) => {
     console.log(subset);
 });
@@ -34,8 +38,3 @@ result = find_subsets([1, 5, 3, 3]);
 result.forEach((subset) => {
     console.log(subset);
 });
-
-let a1 = [1,2,3,4,5];
-let a2 = [6,7,8,9,10];
-let a3 = a1.concat(a2);
-console.log(a3)
