@@ -18,8 +18,8 @@ function find_string_anagrams(str, pattern) {
     const resultIndices = [];
     // our goal is to match all the characters from the 'charFrequency' with the current window
     // try to extend the range [windowStart, windowEnd]
-    for (windowEnd = 0; windowEnd < str.length; windowEnd++) {
-      const rightChar = str[windowEnd];
+    for (i = 0; i < str.length; i++) {
+      const rightChar = str[i];
       if (rightChar in charFrequency) {
         // decrement the frequency of matched character
         charFrequency[rightChar] -= 1;
@@ -33,7 +33,7 @@ function find_string_anagrams(str, pattern) {
       }
 
       // shrink the sliding window
-      if (windowEnd >= pattern.length - 1) {
+      if (i >= pattern.length - 1) {
         leftChar = str[windowStart];
         windowStart += 1;
         if (leftChar in charFrequency) {
@@ -48,4 +48,4 @@ function find_string_anagrams(str, pattern) {
     return resultIndices;
   }
 
-console.log(find_string_anagrams("abccba", "cba"));
+console.log(find_string_anagrams("abccbabca", "cba"));

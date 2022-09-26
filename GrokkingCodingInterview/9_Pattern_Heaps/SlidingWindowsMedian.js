@@ -8,7 +8,7 @@ Space Complexity:O(K)
 */
 
 
-const Heap = require("../../node_modules/collections/heap");
+const Heap = require("collections/heap");
 class SlidingWindowMedian {
     find_sliding_window_median(nums, k) {
         let result = [];

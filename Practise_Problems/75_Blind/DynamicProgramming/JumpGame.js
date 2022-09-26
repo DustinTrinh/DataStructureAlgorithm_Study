@@ -17,6 +17,6 @@ var canJump = function (nums) {
   return goal === 0 ? true : false;
 };
 
-let nums = [1,1,1,1,1,1,1, 2];
+let nums = [1,1,3,0,1,1,1, 2];
 let result = canJump(nums);
 console.log(result);
