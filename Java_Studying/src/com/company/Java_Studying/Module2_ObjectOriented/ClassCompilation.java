@@ -1,4 +1,4 @@
-package com.company.Studying.Module2_ObjectOriented;
+package com.company.Java_Studying.Module2_ObjectOriented;
 
 public class ClassCompilation {
     public static void main(String[] args) {

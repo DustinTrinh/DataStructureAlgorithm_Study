@@ -1,4 +1,4 @@
-package com.company.Studying.Module1_Syntax;
+package com.company.Java_Studying.Module1_Syntax;
 
 import java.util.Arrays;
 

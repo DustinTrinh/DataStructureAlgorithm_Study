@@ -1,4 +1,4 @@
-package com.company.Studying.Module5_JavaCollections;
+package com.company.Java_Studying.Module5_JavaCollections;
 
 import java.util.Collection;
 import java.util.HashMap;

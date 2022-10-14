@@ -1,4 +1,4 @@
-package com.company.Studying.Module2_ObjectOriented;
+package com.company.Java_Studying.Module2_ObjectOriented;
 
 public class SimpleCarClass {
     //PUBLIC Can be access with the instance

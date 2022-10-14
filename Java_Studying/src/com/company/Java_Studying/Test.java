@@ -1,4 +1,4 @@
-package com.company.Studying;
+package com.company.Java_Studying;
 
 public class Test {
     public static void test(){

@@ -1,4 +1,4 @@
-package com.company.Studying.Module2_ObjectOriented;
+package com.company.Java_Studying.Module2_ObjectOriented;
 
 // A sample class Shape which provides a method to get the Shape's area
 

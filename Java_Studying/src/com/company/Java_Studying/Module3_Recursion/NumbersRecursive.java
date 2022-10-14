@@ -1,4 +1,4 @@
-package com.company.Studying.Module3_Recursion;
+package com.company.Java_Studying.Module3_Recursion;
 
 public class NumbersRecursive {
 
